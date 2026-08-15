@@ -1,0 +1,25 @@
+$ docchrono build data --strict --output output/vendor.case.json
+Saved: output/vendor.case.json
+Documents processed: 3
+People and organizations discovered: 7
+Events discovered: 3
+Relationships discovered: 7
+Items needing review: 3
+Chronology generated: yes
+Evidence graph generated: yes
+
+$ docchrono inspect output/vendor.case.json --json
+{"claims": 5, "complete": true, "document_failures": 0, "documents": 3, "entities": 7, "events": 3, "relationships": 7, "review_items": 3, "source_references": 3}
+
+$ docchrono timeline output/vendor.case.json
+2026-06-04
+Approved: Vendor #N-42
+Sources: 02_approval.eml
+
+2026-06-04T10:30:00-05:00
+Email Sent
+Sources: 02_approval.eml
+
+2026-06-09
+Paid: Invoice #884
+Sources: 03_invoice_record.md
